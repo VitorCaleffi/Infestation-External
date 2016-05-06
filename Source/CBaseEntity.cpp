@@ -12,7 +12,7 @@ CBaseEntity::CBaseEntity(int nIndex)
 	DWORD RadarStruct = Memory::Read<DWORD>(Memory::GetModule("client") + cRadarStruct);
 	RadarStruct = Memory::Read<DWORD>(RadarStruct + 0x50);
 
-	uintptr_t pNext = Memory::Readçççççççç<uintptr_t>(this->dwEntity + 8);
+	uintptr_t pNext = Memory::Read<uintptr_t>(this->dwEntity + 8);
 	pNext = Memory::Read<uintptr_t>(pNext + 8);
 	pNext = Memory::Read<uintptr_t>(pNext + 1);
 	pNext = Memory::Read<uintptr_t>(pNext + 8);
